@@ -1,4 +1,4 @@
-# Driver Monitoring System (Path A)
+# Driver Monitoring System
 
 This repository contains a complete driver‑monitoring system written in Python.  It analyses a driver’s face using a standard webcam and MediaPipe Face Mesh to estimate drowsiness, yawning, distraction and (optionally) phone usage.  Alerts are delivered via offline text‑to‑speech and an on‑screen heads‑up display (HUD).
 
