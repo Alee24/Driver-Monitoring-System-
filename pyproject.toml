@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dms_path_a"
+version = "0.1.0"
+description = "Driver Monitoring System (Path A)"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+readme = "README.md"
+authors = [ { name = "Driver Monitoring System Contributors" } ]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.8",
+    "numpy>=1.23",
+    "pyttsx3>=2.90",
+    "pydantic>=2.6",
+    "PyYAML>=6.0",
+    "ultralytics>=8.0",
+    "typer>=0.9",
+    "loguru>=0.7",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+dms-app = "src.dms.app:main"

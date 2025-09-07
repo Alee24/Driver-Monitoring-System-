@@ -1,0 +1,31 @@
+# Default configuration for the driver monitoring system.
+# Values here provide sane defaults for most webcams.  You can override any of
+# these settings via environment variables (prefixed with DMS_) or by
+# specifying command‑line flags when running the application.
+
+source: 0              # Camera index or path to a video file
+width: 1280           # Frame width
+height: 720           # Frame height
+target_fps: 30        # Target frames per second; frames may be dropped to maintain this rate
+
+# Thresholds and heuristics
+ear_thresh: 0.23      # Eye Aspect Ratio threshold for eye closure
+perclos_window: 120   # Number of frames used in the PERCLOS sliding window
+perclos_thresh: 0.35  # PERCLOS threshold above which the driver is considered drowsy
+mar_yawn: 0.65        # Mouth Aspect Ratio threshold for yawning
+gaze_secs: 1.0        # Time in seconds allowed to look away before distraction alert
+yaw_abs_deg: 25.0     # Absolute yaw angle (degrees) considered off‑road
+down_pitch_deg: 18.0  # Pitch angle (degrees) considered looking down
+
+# Phone detection
+enable_phone: false    # Enable YOLOv8n phone detection
+yolo_model: yolov8n.pt # Path to the YOLOv8n weights file
+phone_zone_ratio: 0.55 # Fraction of frame height considered the “phone zone” (lower part of the frame)
+
+# Audio settings
+speak_rate: 165        # Words per minute for text‑to‑speech
+#audio_cooldown: 1.5    # Minimum seconds between consecutive alerts
+audio_repeat_interval: 1.0 # Minimum seconds between repeated alerts
+
+# Display
+headless: false        # When true, no window is shown; logs only

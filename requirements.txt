@@ -1,0 +1,10 @@
+opencv-python>=4.8.0
+mediapipe>=0.10.8
+numpy>=1.23
+pyttsx3>=2.90
+pydantic>=2.6
+PyYAML>=6.0
+ultralytics>=8.0
+typer>=0.9
+loguru>=0.7
+python-dotenv>=1.0
